@@ -1,0 +1,18 @@
+import math
+t=int(input())
+for i in range(0,t):
+    c=input()
+    a=[int(j) for j in input().split(" ")]
+    d=input()
+    q=[int(j) for j in input().split(" ")]
+    a.sort()
+    for k in q:
+        c=0
+        for j in a:
+            if math.gcd(k,j)>1:
+                a.remove(j)
+                print(j,end=" ")
+                c=1
+                break
+        if c==0:
+            print(a.pop(0),end=" ")
