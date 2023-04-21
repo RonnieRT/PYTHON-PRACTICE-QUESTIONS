@@ -11,3 +11,4 @@ for _ in range(int(input())):
         for enemy in enemyhealth:
             cnt += -(-enemy//x)
         print(min(cnt,maxhealth))       
+        
